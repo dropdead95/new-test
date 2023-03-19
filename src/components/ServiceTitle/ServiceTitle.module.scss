@@ -14,3 +14,10 @@
     background-color: $text-color;
   }
 }
+
+@media (max-width: 767px) {
+  .title {
+    width: 200px;
+}}
+
+

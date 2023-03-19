@@ -2,10 +2,12 @@
 
 .footer {
   padding: 40px 0;
+  width: 100%;
 }
 .reviews {
   display: flex;
   flex-direction: column;
+
 }
 .title {
   color: $active-green;
@@ -14,6 +16,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .reviews_1 {
   width: 200px;
@@ -88,8 +91,13 @@
 .logoMobile {
   display: none;
 }
+@media (max-width: 767px) {
+  .reviews {
+    display: none;
+  }
+}
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .container {
     flex-direction: column;
   }
