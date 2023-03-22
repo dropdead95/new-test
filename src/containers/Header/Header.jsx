@@ -6,7 +6,7 @@ import Facebook from "../../assets/facebook.png";
 import styles from "./Header.module.scss";
 import { Burger, Logo, Mail, Phone, WhatsUp } from "../../icons";
 import { Container, MenuButton } from "../../components";
-import { Telegram } from "../../icons/Telegram";
+import { Telegram } from "../../icons";
 import { menu } from "../../mockData/menu";
 
 export const Header = () => {
@@ -47,6 +47,7 @@ export const Header = () => {
               className={styles.menuItem}
             />
           ))}
+          {/*  sdfsdf*/}
         </nav>
       </Container>
     </header>
