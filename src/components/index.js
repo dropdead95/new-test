@@ -6,3 +6,6 @@ export * from "./MenuFooterItem";
 export * from "./Container";
 export * from "./ReviewsSlider";
 export * from "./Review";
+export * from "./Quiz";
+export * from "./QuestionWrapper";
+export * from "./QuestionInner";
