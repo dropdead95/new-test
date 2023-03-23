@@ -1,5 +1,8 @@
 import {v1} from "uuid";
-
+import newBuild from "../assets/newBuilding.jpg";
+import house from "../assets/house.jpg";
+import flat from "../assets/flat.jpg";
+import comercial from "../assets/comercial.jpg";
 
 export const quizData = [{
     repair: [
@@ -7,10 +10,10 @@ export const quizData = [{
         {
             id: 0,
             title: 'Где планируете делать ремонт?',
-            values: [{id: v1(), value: "Новостройка", img: ''},
-                {id: v1(), value: "Квартира", img: ''},
-                {id: v1(), value: "Дом", img: ''},
-                {id: v1(), value: "Коммерческий объект", img: ''}]
+            values: [{id: v1(), value: "Новостройка", img: newBuild},
+                {id: v1(), value: "Квартира", img: flat},
+                {id: v1(), value: "Дом", img: house},
+                {id: v1(), value: "Коммерческий объект", img: comercial}]
         },
         {
             id: 1,
