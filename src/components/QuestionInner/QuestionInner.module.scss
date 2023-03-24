@@ -11,6 +11,15 @@
   margin-bottom: 40px;
 }
 .content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .anotherContent {
   display: flex;

@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
+import axios from "axios";
 
 import styles from "./QuestionWrapper.module.scss";
 
 import { QuestionInner } from "../QuestionInner";
-import { quizData } from "../../mockData/quiz";
 
 export const QuestionWrapper = () => {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          process.env.REACT_APP_API_URL + "/questions?populate=*",
+          {
+            headers: {
+              Authorization: `bearer ${process.env.REACT_APP_API_TOKEN}`,
+            },
+          }
+        );
+        setQuestions(res.data.data);
+        console.log(questions);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className={styles.content}>
       <div className={styles.navigation}>
@@ -25,17 +47,11 @@ export const QuestionWrapper = () => {
           ))}
       </div>
       <Routes>
-        {quizData[1].building.map((question) => (
+        {questions.map((item) => (
           <Route
-            key={question.id}
-            path={`${question.id}`}
-            element={
-              <QuestionInner
-                title={question.title}
-                id={question.id}
-                titles={question.values}
-              />
-            }
+            key={item.id}
+            path={`${item.id}`}
+            element={<QuestionInner item={item} />}
           />
         ))}
       </Routes>

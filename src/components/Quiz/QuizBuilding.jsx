@@ -10,7 +10,8 @@ export const QuizBuilding = () => {
     <section className={styles.wrapper}>
       <Container className={styles.quizContainer}>
         <p className={styles.info}>
-          Гарантируем качество и сроки выполненных работ.
+          Выполним ремонт по договору за фиксированную цену и к указанному
+          сроку. Гарантия до 5 лет.
         </p>
         <QuestionWrapper />
       </Container>
